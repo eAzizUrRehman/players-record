@@ -1,4 +1,4 @@
-#include "./teamsData/teams/teams.h"
+#include "./teams/teams.h"
 
 int main() {
 	Teams teams;
