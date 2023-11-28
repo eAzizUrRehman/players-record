@@ -37,6 +37,7 @@
 
 # replit
 .env
+.replit
 replit.nix
 Makefile
 main-debug
