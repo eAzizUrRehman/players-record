@@ -17,13 +17,17 @@ void Teams::showTeamsMenu() {
 	Players players;
 
   do {
-    cout << "Teams Menu:" << endl
+    cout << "\nTeams Menu:" << endl
          << "\t1. Add a team" << endl
          << "\t2. Edit team" << endl
          << "\t3. Delete a team" << endl
 		<< "\t4. Show all teams" << endl
 		<< "\t5. Enter players menu" << endl
-         << "\t0. Exit the program" << endl;
+		<< endl
+
+		<<"\t9. Show current menu again"<<endl
+		<<"\t0. Terminate the program"<<endl
+		<< "Enter here: " ;
     cin >> teamsMenu;
 
     switch (teamsMenu) {
@@ -50,14 +54,14 @@ void Teams::showTeamsMenu() {
 	case 5:		
 		players.showPlayersMenu();
 		break;
-    case 0:
-      exit(0);
+    
     default:
       cout << "Invalid option" << endl;
     }
-
-	  cout << "\n(Enter 9 to show current menu again. Enter 0 to exit the program.):"  ;
-    cin >> teamsMenu;
+	   if(teamsMenu  != 9){
+			cout << "Enter any option from the above again: ";
+			 cin >> teamsMenu;
+		 }
 
   } while (teamsMenu != 0);
 }

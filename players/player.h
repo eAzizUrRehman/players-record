@@ -4,9 +4,12 @@
 using namespace std;
 
 struct Player {
-  string playerName, playerCountry, playerDOB, playerDateOfDebut, playerCategory, playerBestScore, playerBestWicketFigure;
-	int playerTotalScores, playerTotalWickets, playerTotalScoresGiven, playerAge;
-	float playerTotalOverBowled;
+  string playerName, playerCountry, playerDOB, playerDateOfDebut,
+      playerCategory, playerBestWicketFigure;
+  int   playerTotalWicketsTaken, playerTotalRunsGiven, playerAge,
+      playerNoOfMatchesPlayed, playerTotalRunsTaken 
+      ;
+  float playerTotalOverBowled, playerBattingAverage;
 
   Player *nextPlayer;
 };

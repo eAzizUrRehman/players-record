@@ -3,6 +3,7 @@
 #include "./functions/deletePlayer/deletePlayer.h"
 #include "./functions/editPlayer/editPlayer.h"
 #include "./functions/showPlayers/showPlayers.h"
+#include "./functions/searchPlayer/searchPlayer.h"
 #include <cstdlib> // to use exit()
 
 using namespace std;
@@ -12,12 +13,18 @@ void Players::showPlayersMenu() {
   int playersMenu;
 
   do {
-    cout << "Players Menu:" << endl
+    cout << "\nPlayers Menu:" << endl
          << "\t1. Add a player" << endl
          << "\t2. Edit player" << endl
          << "\t3. Delete a player" << endl
          << "\t4. Show all players" << endl
-         << "\t0. Exit the program" << endl;
+         << "\t5. Search for a player" << endl
+
+		<< endl
+
+		<<"\t9. Show current menu again"<<endl
+		<<"\t0. Go to previous menu"<<endl
+		<< "Enter here: " ;
     cin >> playersMenu;
 
     switch (playersMenu) {
@@ -39,18 +46,23 @@ void Players::showPlayersMenu() {
       cin >> playerName;
       deletePlayer(playerName, firstPlayer);
       break;
-    case 4:
-      showPlayers(firstPlayer);
-      break;
-    case 0:
-      exit(0);
+		case 4:
+		  showPlayers(firstPlayer);
+		  break;
+		case 5:
+		  searchPlayer(firstPlayer);
+			playersMenu = 9;
+		  break;
+   
     default:
       cout << "Invalid option" << endl;
       break;
     }
 
-    cout << "\n(Enter 9 to show current menu again. Enter 0 to exit the program.)" << endl;
-    cin >> playersMenu;
+   if(playersMenu  != 9){
+	   cout << "Enter any option from the above again: " ;
+	   cin >> playersMenu;
+   }
 
   } while (playersMenu != 0);
 }
