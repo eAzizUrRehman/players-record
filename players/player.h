@@ -3,12 +3,12 @@
 #include <string>
 using namespace std;
 
-struct Player {
+struct Player
+{
   string playerName, playerCountry, playerDOB, playerDateOfDebut,
       playerCategory, playerBestWicketFigure;
-  int   playerTotalWicketsTaken, playerTotalRunsGiven, playerAge,
-      playerNoOfMatchesPlayed, playerTotalRunsTaken 
-      ;
+  int playerTotalWicketsTaken, playerTotalRunsGiven, playerAge,
+      playerNoOfMatchesPlayed, playerTotalRunsTaken;
   float playerTotalOverBowled, playerBattingAverage;
 
   Player *nextPlayer;

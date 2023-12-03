@@ -2,10 +2,13 @@
 #include <iostream>
 #include <string>
 
-void editTeam(const string &oldTeamName, const string &newTeamName, Team*& firstTeam) {
+void editTeam(const string &oldTeamName, const string &newTeamName, Team *&firstTeam)
+{
 	Team *currentTeam = firstTeam;
-	while (currentTeam != nullptr) {
-		if (currentTeam->teamName == oldTeamName) {
+	while (currentTeam != nullptr)
+	{
+		if (currentTeam->teamName == oldTeamName)
+		{
 			currentTeam->teamName = newTeamName;
 			return;
 		}

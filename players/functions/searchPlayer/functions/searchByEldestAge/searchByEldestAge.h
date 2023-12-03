@@ -1,3 +1,3 @@
 #include "../../../../player.h"
 
-extern void searchByEldestAge(Player*& firstPlayer);
+extern void searchByEldestAge(Player *&firstPlayer);

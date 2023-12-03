@@ -3,9 +3,10 @@
 #include <string>
 using namespace std;
 
-struct Team {
+struct Team
+{
   string teamName;
   Team *nextTeam;
 };
 
-#endif 
+#endif

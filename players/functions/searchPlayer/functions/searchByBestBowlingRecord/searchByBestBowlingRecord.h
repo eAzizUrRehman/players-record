@@ -1,3 +1,3 @@
 #include "../../../../player.h"
 
-extern void searchByBestBowlingRecord(Player*& firstPlayer);
+extern void searchByBestBowlingRecord(Player *&firstPlayer);

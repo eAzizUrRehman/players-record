@@ -4,7 +4,8 @@
 #include <string>
 using namespace std;
 
-Player *createPlayer() {
+Player *createPlayer()
+{
   Player *newPlayer = new Player;
   cout << "Enter name: ";
   cin >> newPlayer->playerName;

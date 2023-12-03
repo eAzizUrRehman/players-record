@@ -1,3 +1,3 @@
 #include "../../player.h"
 
-extern void  searchPlayer(Player*& firstPlayer);
+extern void searchPlayer(Player *&firstPlayer);

@@ -4,12 +4,13 @@
 #include <iostream>
 using namespace std;
 
-struct Players {
-    Player* firstPlayer;
-    
+struct Players
+{
+    Player *firstPlayer;
+
     Players() : firstPlayer(nullptr) {}
 
-	void showPlayersMenu();
+    void showPlayersMenu();
 };
 
 #endif

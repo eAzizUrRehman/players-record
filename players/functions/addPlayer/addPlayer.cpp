@@ -1,15 +1,18 @@
 #include "../../player.h"
 #include "../createPlayer/createPlayer.h"
 
-
-void addPlayer(Player*& firstPlayer) {
+void addPlayer(Player *&firstPlayer)
+{
 	Player *newPlayer = createPlayer();
-
-	if (firstPlayer == nullptr) {
+	if (firstPlayer == nullptr)
+	{
 		firstPlayer = newPlayer;
-	} else {
+	}
+	else
+	{
 		Player *currentPlayer = firstPlayer;
-		while (currentPlayer->nextPlayer != nullptr) {
+		while (currentPlayer->nextPlayer != nullptr)
+		{
 			currentPlayer = currentPlayer->nextPlayer;
 		}
 		currentPlayer->nextPlayer = newPlayer;

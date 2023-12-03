@@ -1,3 +1,3 @@
 #include "../../player.h"
 
-extern Player* createPlayer();
+extern Player *createPlayer();

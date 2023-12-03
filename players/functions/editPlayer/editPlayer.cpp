@@ -2,10 +2,13 @@
 #include <iostream>
 #include <string>
 
-void editPlayer(const string &playerName, const string &playerCountry,const string &playerCategory, Player*& firstPlayer) {
+void editPlayer(const string &playerName, const string &playerCountry, const string &playerCategory, Player *&firstPlayer)
+{
 	Player *currentPlayer = firstPlayer;
-	while (currentPlayer != nullptr) {
-		if (currentPlayer->playerName == playerName) {
+	while (currentPlayer != nullptr)
+	{
+		if (currentPlayer->playerName == playerName)
+		{
 			currentPlayer->playerCountry = playerCountry;
 			currentPlayer->playerCategory = playerCategory;
 			return;

@@ -10,27 +10,27 @@
 
 using namespace std;
 
-void Teams::showTeamsMenu() {
+void Teams::showTeamsMenu()
+{
   string teamName, oldTeamName, newTeamName;
   int teamsMenu;
 
-	Players players;
+  Players players;
 
-  do {
+  do
+  {
     cout << "\nTeams Menu:" << endl
          << "\t1. Add a team" << endl
          << "\t2. Edit team" << endl
          << "\t3. Delete a team" << endl
-		<< "\t4. Show all teams" << endl
-		<< "\t5. Enter players menu" << endl
-		<< endl
+         << "\t4. Show all teams" << endl
+         << "\t5. Enter players menu" << endl
 
-		<<"\t9. Show current menu again"<<endl
-		<<"\t0. Terminate the program"<<endl
-		<< "Enter here: " ;
+         << "Enter here: ";
     cin >> teamsMenu;
 
-    switch (teamsMenu) {
+    switch (teamsMenu)
+    {
     case 1:
       cout << "Enter team name: ";
       cin >> teamName;
@@ -51,17 +51,17 @@ void Teams::showTeamsMenu() {
     case 4:
       showTeams(firstTeam);
       break;
-	case 5:		
-		players.showPlayersMenu();
-		break;
-    
+    case 5:
+      players.showPlayersMenu();
+      break;
+
     default:
       cout << "Invalid option" << endl;
     }
-	   if(teamsMenu  != 9){
-			cout << "Enter any option from the above again: ";
-			 cin >> teamsMenu;
-		 }
+    cout
+
+        << "\nEnter 9 to show 'Teams Menu' again or 0 to terminate the program: ";
+    cin >> teamsMenu;
 
   } while (teamsMenu != 0);
 }

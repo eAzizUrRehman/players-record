@@ -1,3 +1,3 @@
 #include "../../../../player.h"
 
-extern void searchByMostMatches(Player*& firstPlayer);
+extern void searchByMostMatches(Player *&firstPlayer);

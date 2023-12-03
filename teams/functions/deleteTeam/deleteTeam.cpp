@@ -2,14 +2,20 @@
 #include <iostream>
 #include <string>
 
-void deleteTeam(const string &teamName, Team*& firstTeam) {
+void deleteTeam(const string &teamName, Team *&firstTeam)
+{
 	Team *currentTeam = firstTeam;
 	Team *prevTeam = nullptr;
-	while (currentTeam != nullptr) {
-		if (currentTeam->teamName == teamName) {
-			if (prevTeam == nullptr) { // Deleting the first team
+	while (currentTeam != nullptr)
+	{
+		if (currentTeam->teamName == teamName)
+		{
+			if (prevTeam == nullptr)
+			{ // Deleting the first team
 				firstTeam = currentTeam->nextTeam;
-			} else {
+			}
+			else
+			{
 				prevTeam->nextTeam = currentTeam->nextTeam;
 			}
 			delete currentTeam;
