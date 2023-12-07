@@ -6,8 +6,6 @@
 
 #include "../players/players.h"
 
-#include <cstdlib> // to use exit()
-
 using namespace std;
 
 void Teams::showTeamsMenu()
@@ -24,11 +22,15 @@ void Teams::showTeamsMenu()
          << "\t2. Edit team" << endl
          << "\t3. Delete a team" << endl
          << "\t4. Show all teams" << endl
-         << "\t5. Enter players menu" << endl
+         << "\t5. Enter into players menu" << endl
 
          << "Enter here: ";
     cin >> teamsMenu;
-
+    while (teamsMenu < 0 || teamsMenu > 5)
+    {
+      cout << "Invalid input. Enter again: ";
+      cin >> teamsMenu;
+    }
     switch (teamsMenu)
     {
     case 1:
@@ -53,15 +55,18 @@ void Teams::showTeamsMenu()
       break;
     case 5:
       players.showPlayersMenu();
-      break;
-
-    default:
-      cout << "Invalid option" << endl;
     }
-    cout
-
-        << "\nEnter 9 to show 'Teams Menu' again or 0 to terminate the program: ";
-    cin >> teamsMenu;
+    if (teamsMenu != 0)
+    {
+      cout << "\nEnter 9 to show 'Teams Menu' again or 0 to terminate the "
+              "program: ";
+      cin >> teamsMenu;
+      while (teamsMenu != 0 && teamsMenu != 9)
+      {
+        cout << "Invalid input. Enter again: ";
+        cin >> teamsMenu;
+      }
+    }
 
   } while (teamsMenu != 0);
 }

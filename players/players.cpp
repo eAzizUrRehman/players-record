@@ -24,6 +24,11 @@ void Players::showPlayersMenu()
 
          << "Enter here: ";
     cin >> playersMenu;
+    while (playersMenu < 0 || playersMenu > 5)
+    {
+      cout << "Invalid input. Enter again: ";
+      cin >> playersMenu;
+    }
 
     switch (playersMenu)
     {
@@ -51,15 +56,17 @@ void Players::showPlayersMenu()
     case 5:
       searchPlayer(firstPlayer);
       playersMenu = 9;
-      break;
-
-    default:
-      cout << "Invalid option" << endl;
-      break;
     }
-    cout
-        << "\nEnter 9 to show 'Players Menu' again or 0 to exit this menu: ";
-    cin >> playersMenu;
+    if (playersMenu != 0)
+    {
+      cout << "\nEnter 9 to show 'Players Menu' again or 0 to exit this menu: ";
 
+      cin >> playersMenu;
+      while (playersMenu != 0 && playersMenu != 9)
+      {
+        cout << "Invalid input. Enter again: ";
+        cin >> playersMenu;
+      }
+    }
   } while (playersMenu != 0);
 }

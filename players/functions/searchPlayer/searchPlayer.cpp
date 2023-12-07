@@ -28,7 +28,11 @@ void searchPlayer(Player *&firstPlayer)
 
 			 << "Enter here: ";
 		cin >> searchPlayerMenu;
-
+		while (searchPlayerMenu < 0 || searchPlayerMenu > 7)
+		{
+			cout << "Invalid input. Enter again: ";
+			cin >> searchPlayerMenu;
+		}
 		switch (searchPlayerMenu)
 		{
 		case 1:
@@ -59,9 +63,15 @@ void searchPlayer(Player *&firstPlayer)
 		default:
 			cout << "Invalid option" << endl;
 		}
-		cout
-			<< "\nEnter 9 to show 'Search Player' Menu again or 0 to exit this menu: ";
-		cin >> searchPlayerMenu;
-
+		if (searchPlayerMenu != 0)
+		{
+			cout << "\nEnter 9 to show 'Search Player' Menu again or 0 to exit this menu: ";
+			cin >> searchPlayerMenu;
+			while (searchPlayerMenu != 0 && searchPlayerMenu != 9)
+			{
+				cout << "Invalid input. Enter again: ";
+				cin >> searchPlayerMenu;
+			}
+		}
 	} while (searchPlayerMenu != 0);
 }
